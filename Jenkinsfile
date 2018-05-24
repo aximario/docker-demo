@@ -1,15 +1,11 @@
-pipeline {
-  agent {
-    dockerfile {
-      filename './'
+node {
+    stage('Build') {
+        echo 'Building....'
     }
-
-  }
-  stages {
-    stage('build') {
-      steps {
-        sh 'python --version'
-      }
+    stage('Test') {
+        echo 'Building....'
     }
-  }
+    stage('Deploy') {
+        echo 'Deploying....'
+    }
 }
